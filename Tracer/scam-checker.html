@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var s=JSON.parse(localStorage.getItem("cyberguard-settings")||"{}");var t=["violet","ocean","forest","sand","crimson"].includes(s.theme)?s.theme:"violet";var m=["light","dark","system"].includes(s.mode)?s.mode:(s.lightTheme?"light":"dark");document.documentElement.dataset.theme=t;document.documentElement.dataset.mode=t==="crimson"?"dark":m}catch(e){document.documentElement.dataset.theme="violet";document.documentElement.dataset.mode="dark"}})();</script>
+  <meta name="description" content="A private, on-device yes-or-no guide to checking a suspicious message.">
+  <title>Is this message a scam? | CyberGuard Security Portal</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script><script src="js/app.js" defer></script><script src="js/scam-checker.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell"><aside class="sidebar" data-sidebar aria-label="Sidebar navigation"></aside><div class="main-column">
+    <header class="topbar"><button class="mobile-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button><div class="welcome">Welcome</div><label class="search-box"><span class="hidden">Search portal pages</span><input id="site-search" type="search" placeholder="Search pages…" aria-label="Search portal pages"></label><button class="icon-button" id="notification-button" type="button" aria-label="Notifications">🔔</button></header>
+    <main class="main-content" id="main-content">
+      <h1>Is this message a scam?</h1>
+      <p class="intro">Answer a few yes-or-no questions. This guide checks your answers in this browser. Nothing you enter is sent or saved.</p>
+      <section class="panel" aria-labelledby="checker-question">
+        <p class="muted" id="checker-progress" aria-live="polite"></p>
+        <h2 id="checker-question" tabindex="-1">Loading question…</h2>
+        <div class="scam-answers" id="checker-answers"></div>
+        <div id="checker-result" class="scam-result section" aria-live="polite" hidden></div>
+        <button class="button button-secondary section" id="checker-restart" type="button" hidden>Start again</button>
+      </section>
+      <section class="section">
+        <h2>Common scam approaches</h2>
+        <div class="grid two-column">
+          <article class="card"><h3>Family-emergency calls</h3><p>A caller says a relative is in trouble and asks for money or secrecy. Call your relative or another family member using a number you already know.</p></article>
+          <article class="card"><h3>Tech-support pop-ups</h3><p>A warning says your device is infected and tells you to call or install a tool. Close the page and contact support using the device maker’s official app or site.</p></article>
+          <article class="card"><h3>Fake bank or government calls</h3><p>A caller threatens arrest or account loss and asks for money, codes, or details. Hang up and call the organization using a trusted number.</p></article>
+          <article class="card"><h3>Romance scams</h3><p>Someone you met online asks for money, gift cards, or help with an emergency. Do not send money; talk with someone you trust.</p></article>
+          <article class="card"><h3>Delivery texts</h3><p>A text says you must pay a fee or fix an address. Check the delivery in the carrier’s official app or website instead of its link.</p></article>
+          <article class="card"><h3>Fake prizes</h3><p>A message says you won but must pay or share details to claim it. Do not pay a fee; check the offer with the organization through a trusted route.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>© 2026 CyberGuard x TechFlow · Security awareness for everyone.</span><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Dashboard</a><a href="password-tools.html">Tools</a><a href="ethics.html">Links</a></nav></footer>
+  </div></div>
+</body>
+</html>
