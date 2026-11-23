@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title description">
+  <title id="title">Spot the phishing warning signs</title>
+  <desc id="description">An educational infographic listing urgency, suspicious links, mismatched sender domains, and requests for secret codes as warning signs.</desc>
+  <rect width="900" height="500" rx="26" fill="#100D16"/>
+  <rect x="28" y="28" width="844" height="444" rx="20" fill="#211829" stroke="#A952B9" stroke-width="3"/>
+  <text x="65" y="105" fill="#f0f7fb" font-family="Arial,sans-serif" font-size="38" font-weight="700">SPOT THE PHISH</text>
+  <text x="65" y="148" fill="#CBBBD1" font-family="Arial,sans-serif" font-size="21">Pause before you click. Check these common warning signs:</text>
+  <g fill="#A952B9" font-family="Arial,sans-serif" font-size="25" font-weight="700">
+    <text x="80" y="225">01</text><text x="80" y="300">02</text><text x="80" y="375">03</text><text x="80" y="450">04</text>
+  </g>
+  <g fill="#f0f7fb" font-family="Arial,sans-serif" font-size="24">
+    <text x="145" y="225">Urgent threats or too-good-to-be-true offers</text>
+    <text x="145" y="300">Unexpected links, files, or sign-in requests</text>
+    <text x="145" y="375">Sender address or website domain does not match</text>
+    <text x="145" y="450">Requests for passwords or one-time security codes</text>
+  </g>
+</svg>
