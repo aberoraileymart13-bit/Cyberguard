@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var s=JSON.parse(localStorage.getItem("cyberguard-settings")||"{}");var t=["violet","ocean","forest","sand","crimson"].includes(s.theme)?s.theme:"violet";var m=["light","dark","system"].includes(s.mode)?s.mode:(s.lightTheme?"light":"dark");document.documentElement.dataset.theme=t;document.documentElement.dataset.mode=t==="crimson"?"dark":m}catch(e){document.documentElement.dataset.theme="violet";document.documentElement.dataset.mode="dark"}})();</script>
+  <meta name="description" content="Adjust local display preferences and manage your on-device learning data.">
+  <title>Settings | CyberGuard Security Portal</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script><script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell"><aside class="sidebar" data-sidebar aria-label="Sidebar navigation"></aside><div class="main-column">
+    <header class="topbar"><button class="mobile-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button><div class="welcome">Welcome</div><label class="search-box"><span class="hidden">Search portal pages</span><input id="site-search" type="search" placeholder="Search pages…" aria-label="Search portal pages"></label><button class="icon-button" id="notification-button" type="button" aria-label="Notifications">🔔</button></header>
+    <main class="main-content" id="main-content">
+      <h1>Settings</h1>
+      <p class="intro">Preferences and learning data are stored on this device only. This site has no accounts, cookies, or tracking.</p>
+      <section class="panel" aria-labelledby="appearance-heading">
+        <h2 id="appearance-heading">Appearance</h2>
+        <p class="helper-text">Choose a color theme. Changes apply immediately and are saved on this device.</p>
+        <div class="theme-options" id="theme-options" role="radiogroup" aria-labelledby="appearance-heading">
+          <button class="theme-option" type="button" role="radio" data-theme="violet" aria-checked="false" tabindex="-1">
+            <span class="theme-option-heading">Violet</span><span class="theme-preview" aria-hidden="true"><span class="theme-preview-panel"></span><span class="theme-preview-accent"></span><span class="theme-preview-button"></span></span>
+          </button>
+          <button class="theme-option" type="button" role="radio" data-theme="ocean" aria-checked="false" tabindex="-1">
+            <span class="theme-option-heading">Ocean</span><span class="theme-preview" aria-hidden="true"><span class="theme-preview-panel"></span><span class="theme-preview-accent"></span><span class="theme-preview-button"></span></span>
+          </button>
+          <button class="theme-option" type="button" role="radio" data-theme="forest" aria-checked="false" tabindex="-1">
+            <span class="theme-option-heading">Forest</span><span class="theme-preview" aria-hidden="true"><span class="theme-preview-panel"></span><span class="theme-preview-accent"></span><span class="theme-preview-button"></span></span>
+          </button>
+          <button class="theme-option" type="button" role="radio" data-theme="sand" aria-checked="false" tabindex="-1">
+            <span class="theme-option-heading">Sand</span><span class="theme-preview" aria-hidden="true"><span class="theme-preview-panel"></span><span class="theme-preview-accent"></span><span class="theme-preview-button"></span></span>
+          </button>
+          <button class="theme-option" type="button" role="radio" data-theme="crimson" aria-checked="false" tabindex="-1">
+            <span class="theme-option-heading">Crimson Noir <span class="theme-bold-tag">Bold</span></span>
+            <span class="theme-preview" aria-hidden="true"><span class="theme-preview-panel"></span><span class="theme-preview-accent"></span><span class="theme-preview-button"></span></span>
+          </button>
+        </div>
+        <div class="form-control section theme-mode-control">
+          <label for="theme-mode-setting">Color mode</label>
+          <select id="theme-mode-setting" aria-describedby="theme-mode-help">
+            <option value="light">Light</option><option value="dark">Dark</option><option value="system">Device default</option>
+          </select>
+          <span class="helper-text theme-mode-help" id="theme-mode-help">Device default follows your system appearance and updates automatically.</span>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="display-heading">
+        <h2 id="display-heading">Display and interaction</h2>
+        <div class="grid section">
+          <div class="form-control"><label for="display-name-setting">What should we call you?</label><input class="field" id="display-name-setting" maxlength="40" autocomplete="off" placeholder="Welcome"><span class="helper-text">Optional. Leave blank to show “Welcome”. This name stays on this device.</span></div>
+          <div class="form-control"><label for="font-size-setting">Font size</label><select id="font-size-setting"><option value="small">Small</option><option value="medium">Medium</option><option value="large">Large</option></select><span class="helper-text" id="font-size-help">Choose the base text size used across the portal.</span></div>
+          <div><label for="high-contrast-setting"><input id="high-contrast-setting" type="checkbox"> Enable high-contrast mode</label><p class="helper-text">Strengthens text and interface contrast.</p></div>
+          <div><label for="quiz-sound-setting"><input id="quiz-sound-setting" type="checkbox"> Enable quiz sound feedback</label><p class="helper-text">Short, optional sounds indicate correct or incorrect quiz answers.</p></div>
+        </div>
+      </section>
+      <section class="section panel" aria-labelledby="data-heading">
+        <h2 id="data-heading">Your local data</h2>
+        <p>Learning progress, quiz scores, badges, streaks, activity, and your optional greeting are stored in localStorage in this browser. Nothing leaves your device.</p>
+        <div class="form-row"><button class="button" id="download-data-button" type="button">Download my data</button><button class="button button-secondary" id="reset-progress-button" type="button">Reset my progress</button></div>
+      </section>
+      <section class="section panel">
+        <h2>Privacy</h2>
+        <p>No accounts, no cookies, no tracking, and nothing leaves your device. Password Tools run in this browser and do not save or transmit what you enter. Clearing this site’s local storage removes locally saved progress and preferences.</p>
+      </section>
+    </main>
+    <footer class="footer"><span>© 2026 CyberGuard x TechFlow · Security awareness for everyone.</span><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Dashboard</a><a href="password-tools.html">Tools</a><a href="ethics.html">Links</a></nav></footer>
+  </div></div>
+  <dialog class="modal" id="reset-progress-dialog" aria-labelledby="reset-progress-title"><form class="modal-content" id="reset-progress-form"><h2 id="reset-progress-title">Reset all learning progress?</h2><p>This permanently removes completed lessons, scores, badges, streak, and activity from this browser. Your optional greeting and display preferences will remain.</p><div class="form-control"><label for="reset-progress-confirm">Type RESET MY PROGRESS to confirm</label><input class="field" id="reset-progress-confirm" autocomplete="off" required></div><p class="field-error" id="reset-progress-error" role="alert" aria-live="assertive"></p><div class="form-row"><button class="button" type="submit">Reset my progress</button><button class="button button-secondary" type="button" data-close-reset>Cancel</button></div></form></dialog>
+</body>
+</html>

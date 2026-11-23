@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var s=JSON.parse(localStorage.getItem("cyberguard-settings")||"{}");var t=["violet","ocean","forest","sand","crimson"].includes(s.theme)?s.theme:"violet";var m=["light","dark","system"].includes(s.mode)?s.mode:(s.lightTheme?"light":"dark");document.documentElement.dataset.theme=t;document.documentElement.dataset.mode=t==="crimson"?"dark":m}catch(e){document.documentElement.dataset.theme="violet";document.documentElement.dataset.mode="dark"}})();</script>
+  <meta name="description" content="Build practical security habits and track learning progress privately on your device.">
+  <title>Dashboard | CyberGuard Security Portal</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script><script src="js/app.js" defer></script><script src="js/dashboard.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell"><aside class="sidebar" data-sidebar aria-label="Sidebar navigation"></aside><div class="main-column">
+    <header class="topbar"><button class="mobile-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button><div class="welcome">Welcome</div><label class="search-box"><span class="hidden">Search portal pages</span><input id="site-search" type="search" placeholder="Search pages…" aria-label="Search portal pages"></label><button class="icon-button" id="notification-button" type="button" aria-label="Notifications">🔔</button></header>
+    <main class="main-content" id="main-content">
+      <h1>Your security learning</h1>
+      <p class="intro">Explore practical, inclusive security lessons and build safer habits at your own pace. Your progress stays in this browser.</p>
+      <section class="grid stats-grid" aria-label="Your learning summary">
+        <article class="stat-card"><div class="stat-label">Lessons completed</div><strong class="stat-value" id="dashboard-lessons">0</strong></article>
+        <article class="stat-card"><div class="stat-label">Modules completed</div><strong class="stat-value" id="dashboard-modules-completed">0 of 4</strong></article>
+        <article class="stat-card"><div class="stat-label">Best quiz score</div><strong class="stat-value" id="dashboard-best-score">0%</strong></article>
+      </section>
+      <section class="panel section" aria-labelledby="dashboard-progress-title"><div class="section-heading"><h2 id="dashboard-progress-title">Continue learning</h2><a class="button button-small" href="profile.html">My Progress</a></div><div id="dashboard-module-progress" class="progress-list"></div></section>
+      <section class="section" aria-labelledby="quick-links-heading">
+        <h2 id="quick-links-heading">Explore the portal</h2>
+        <div class="grid quick-grid">
+          <a class="card quick-card" href="projects.html"><strong>Awareness Projects</strong><span>Case studies, checklists, and reusable templates.</span></a>
+          <a class="card quick-card" href="resources.html"><strong>Threat Wiki</strong><span>Learn to spot scams, phishing, and identity theft.</span></a>
+          <a class="card quick-card" href="training.html"><strong>Training Overview</strong><span>Continue a module and review learning progress.</span></a>
+          <a class="card quick-card" href="quiz.html"><strong>Knowledge Quiz</strong><span>Practice identifying everyday security risks.</span></a>
+          <a class="card quick-card" href="password-tools.html"><strong>Password Tools</strong><span>Practice password habits locally in your browser.</span></a>
+          <a class="card quick-card" href="ethics.html"><strong>Ethics & References</strong><span>Our principles, standards, and source list.</span></a>
+          <a class="card quick-card" href="settings.html"><strong>Settings</strong><span>Adjust accessibility and manage local data.</span></a>
+          <a class="card quick-card" href="profile.html"><strong>My Progress</strong><span>Review progress, badges, streak, certificate, and activity.</span></a>
+          <a class="card quick-card" href="scam-checker.html"><strong>Is this message a scam?</strong><span>Check a suspicious call, text, email, or pop-up.</span></a>
+          <a class="card quick-card" href="is-this-site-safe.html"><strong>Is this site safe?</strong><span>Learn what this site does and how to check a website.</span></a>
+        </div>
+      </section>
+      <section class="panel section" aria-labelledby="dashboard-achievements"><h2 id="dashboard-achievements">Your achievements</h2><p id="dashboard-streak" class="muted">Learning streak: 0 days</p><div id="dashboard-badges" class="badge-list"></div></section>
+    </main>
+    <footer class="footer"><span>© 2026 CyberGuard x TechFlow · Security awareness for everyone.</span><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Dashboard</a><a href="password-tools.html">Tools</a><a href="ethics.html">Links</a></nav></footer>
+  </div></div>
+</body>
+</html>

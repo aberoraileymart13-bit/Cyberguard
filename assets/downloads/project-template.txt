@@ -1,0 +1,25 @@
+CYBERGUARD x TECHFLOW — SECURITY AWARENESS PROJECT TEMPLATE
+
+Project title:
+Owner and team:
+Target audience:
+Date and duration:
+
+1. Learning objective
+Describe the safe behavior participants should be able to demonstrate.
+
+2. Audience needs
+List relevant roles, accessibility needs, languages, and delivery constraints.
+
+3. Activities and materials
+List the activity steps, facilitator notes, and approved resources.
+
+4. Privacy and ethics review
+Confirm consent, data minimization, accessibility, and a safe non-punitive approach.
+Do not collect real passwords or sensitive personal information.
+
+5. Evaluation
+Choose a privacy-respecting measure of learning, such as an anonymous knowledge check.
+
+6. Follow-up
+Record lessons learned, owner, and review date.
