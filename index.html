@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101a30">
+    <meta name="description" content="Build practical security habits with CyberGuard.">
+    <title>Dashboard | CyberGuard Security Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="CyberGuard home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>Cyber<span class="brand-accent">Guard</span></span>
+      </a>
+      <div class="topbar-actions">
+        <span class="secure-label"><span class="status-dot"></span> Your security hub</span>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme">
+          <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="welcome-row" aria-labelledby="welcome-title">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> PERSONAL SECURITY DASHBOARD</p>
+          <h1 id="welcome-title">Small steps. <span>Stronger security.</span></h1>
+          <p class="welcome-copy">Build everyday habits that help keep your accounts and information safer.</p>
+        </div>
+        <div class="welcome-badge" aria-hidden="true">
+          <span class="badge-orbit orbit-one"></span>
+          <span class="badge-orbit orbit-two"></span>
+          <span class="badge-shield">✓</span>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Your learning progress">
+        <article class="stat-card progress-stat">
+          <div class="stat-icon violet-icon" aria-hidden="true">↗</div>
+          <div class="stat-content">
+            <p class="stat-label">Learning progress</p>
+            <p class="stat-value"><span id="completed-count">0</span><span class="stat-total"> / <span id="lesson-total">3</span> lessons</span></p>
+            <progress id="progress-bar" value="0" max="3" aria-label="Lesson completion"></progress>
+          </div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon green-icon" aria-hidden="true">✓</div>
+          <div>
+            <p class="stat-label">Good habits start here</p>
+            <p class="stat-note">A few minutes today can make a difference.</p>
+          </div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-icon blue-icon" aria-hidden="true">⌁</div>
+          <div>
+            <p class="stat-label">Your next step</p>
+            <p class="stat-note" id="next-step">Choose a lesson to get started.</p>
+          </div>
+        </article>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel lessons-panel" aria-labelledby="lessons-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">LEARN AT YOUR PACE</p>
+              <h2 id="lessons-heading">Security essentials</h2>
+            </div>
+            <span class="section-count">03 LESSONS</span>
+          </div>
+          <p class="panel-intro">Practical, bite-sized guides for the moments that matter.</p>
+
+          <div class="lesson-list">
+            <article class="lesson-card">
+              <div class="lesson-icon lesson-violet" aria-hidden="true">✉</div>
+              <div class="lesson-details">
+                <div class="lesson-title-row"><h3>Spot the suspicious email</h3><span class="lesson-time">4 MIN</span></div>
+                <p>Learn a few clues that can help you pause before clicking.</p>
+                <button class="text-button lesson-toggle" type="button" data-lesson="phishing" aria-pressed="false">Mark as complete <span aria-hidden="true">→</span></button>
+              </div>
+            </article>
+            <article class="lesson-card">
+              <div class="lesson-icon lesson-blue" aria-hidden="true">▤</div>
+              <div class="lesson-details">
+                <div class="lesson-title-row"><h3>Make passwords work harder</h3><span class="lesson-time">5 MIN</span></div>
+                <p>Use unique, long passphrases and store them thoughtfully.</p>
+                <button class="text-button lesson-toggle" type="button" data-lesson="passwords" aria-pressed="false">Mark as complete <span aria-hidden="true">→</span></button>
+              </div>
+            </article>
+            <article class="lesson-card">
+              <div class="lesson-icon lesson-green" aria-hidden="true">◉</div>
+              <div class="lesson-details">
+                <div class="lesson-title-row"><h3>Turn on account protection</h3><span class="lesson-time">3 MIN</span></div>
+                <p>Add another verification step to important accounts.</p>
+                <button class="text-button lesson-toggle" type="button" data-lesson="accounts" aria-pressed="false">Mark as complete <span aria-hidden="true">→</span></button>
+              </div>
+            </article>
+          </div>
+          <p class="inline-status" id="progress-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <aside class="side-column">
+          <section class="panel quiz-panel" aria-labelledby="quiz-heading">
+            <div class="section-heading compact-heading">
+              <div>
+                <p class="eyebrow">QUICK CHECK</p>
+                <h2 id="quiz-heading">Would you click?</h2>
+              </div>
+              <span class="quiz-mark" aria-hidden="true">?</span>
+            </div>
+            <p class="quiz-question">An unexpected email asks you to sign in through a link. What’s the safest next step?</p>
+            <form id="quiz-form">
+              <label class="quiz-option"><input type="radio" name="quiz-answer" value="click"> Click it to check where it leads.</label>
+              <label class="quiz-option"><input type="radio" name="quiz-answer" value="verify"> Verify through the service’s official app or website.</label>
+              <label class="quiz-option"><input type="radio" name="quiz-answer" value="reply"> Reply and ask if the email is real.</label>
+              <button class="primary-button full-button" type="submit">Check answer <span aria-hidden="true">→</span></button>
+            </form>
+            <p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite"></p>
+          </section>
+
+          <section class="panel password-panel" aria-labelledby="password-heading">
+            <div class="section-heading compact-heading">
+              <div>
+                <p class="eyebrow">PASSWORD TOOLS</p>
+                <h2 id="password-heading">Create a password</h2>
+              </div>
+              <span class="password-mark" aria-hidden="true">✳</span>
+            </div>
+            <p class="panel-intro">Generate a random password on this device.</p>
+            <label class="sr-only" for="password-length">Password length</label>
+            <select id="password-length" class="length-select">
+              <option value="16">16 characters</option>
+              <option value="20">20 characters</option>
+              <option value="24">24 characters</option>
+            </select>
+            <button class="secondary-button full-button" id="generate-password" type="button">Generate password <span aria-hidden="true">✦</span></button>
+            <div class="password-output-row">
+              <label class="sr-only" for="password-output">Generated password</label>
+              <input id="password-output" class="password-output" type="text" readonly autocomplete="off" placeholder="Your password appears here">
+              <button class="copy-button" id="copy-password" type="button" disabled>Copy</button>
+            </div>
+            <p class="tool-feedback" id="password-feedback" role="status" aria-live="polite"></p>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <span>CyberGuard <span class="footer-separator">/</span> Stay curious. Stay secure.</span>
+        <span>Security is a practice, not a finish line.</span>
+      </footer>
+    </main>
+
+    <dialog class="welcome-dialog" id="welcome-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-art" aria-hidden="true"><span>✦</span></div>
+      <p class="eyebrow">WELCOME TO CYBERGUARD</p>
+      <h2 id="dialog-title">Your security journey starts here.</h2>
+      <p>Explore a lesson, try the quick check, and build habits you can use every day. Your lesson progress stays saved on this device.</p>
+      <button class="primary-button full-button" id="dismiss-welcome" type="button">Let’s get started <span aria-hidden="true">→</span></button>
+    </dialog>
+  </body>
+</html>
