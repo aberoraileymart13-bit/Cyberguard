@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var s=JSON.parse(localStorage.getItem("cyberguard-settings")||"{}");var t=["violet","ocean","forest","sand","crimson"].includes(s.theme)?s.theme:"violet";var m=["light","dark","system"].includes(s.mode)?s.mode:(s.lightTheme?"light":"dark");document.documentElement.dataset.theme=t;document.documentElement.dataset.mode=t==="crimson"?"dark":m}catch(e){document.documentElement.dataset.theme="violet";document.documentElement.dataset.mode="dark"}})();</script>
+  <meta name="description" content="View and continue security training modules.">
+  <title>Training | CyberGuard Security Portal</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/styles.css"><script src="js/lesson-data.js" defer></script><script src="js/data.js" defer></script><script src="js/app.js" defer></script><script src="js/training.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell"><aside class="sidebar" data-sidebar aria-label="Sidebar navigation"></aside><div class="main-column">
+    <header class="topbar"><button class="mobile-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button><div class="welcome">Welcome</div><label class="search-box"><span class="hidden">Search portal pages</span><input id="site-search" type="search" placeholder="Search pages…" aria-label="Search portal pages"></label><button class="icon-button" id="notification-button" type="button" aria-label="Notifications">🔔</button></header>
+    <main class="main-content" id="main-content">
+      <h1>Training Overview</h1>
+      <p class="intro">Build practical skills through short, focused modules. Your module progress is saved only in this browser on this device.</p>
+      <section class="panel" aria-labelledby="modules-heading">
+        <h2 id="modules-heading">Learning modules</h2>
+        <div class="form-row section">
+          <div class="form-control"><label for="module-filter">Filter modules</label><input class="field" id="module-filter" type="search" placeholder="Search module names"></div>
+          <div class="form-control"><label for="status-filter">Filter by status</label><select id="status-filter"><option value="all">All statuses</option><option value="not-started">Not Started</option><option value="in-progress">In Progress</option><option value="completed">Completed</option></select></div>
+        </div>
+        <div class="table-wrap section"><table><caption class="hidden">Available training modules and individual progress</caption><thead><tr><th scope="col">Module</th><th scope="col">Progress</th><th scope="col">Status</th><th scope="col">Actions</th></tr></thead><tbody id="modules-table">
+          <tr data-module="phishing"><th scope="row">Phishing 101</th><td><div class="progress-track" role="progressbar" aria-label="Phishing 101 progress" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill"></div></div><span class="progress-label"></span></td><td><span class="status"></span></td><td><a class="button button-small module-action" href="lesson.html?m=phishing&amp;l=1">Start</a></td></tr>
+          <tr data-module="privacy"><th scope="row">Data Privacy Basics</th><td><div class="progress-track" role="progressbar" aria-label="Data Privacy Basics progress" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill"></div></div><span class="progress-label"></span></td><td><span class="status"></span></td><td><a class="button button-small module-action" href="lesson.html?m=privacy&amp;l=1">Start</a></td></tr>
+          <tr data-module="passwords"><th scope="row">Password Security</th><td><div class="progress-track" role="progressbar" aria-label="Password Security progress" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill"></div></div><span class="progress-label"></span></td><td><span class="status"></span></td><td><a class="button button-small module-action" href="lesson.html?m=passwords&amp;l=1">Start</a></td></tr>
+          <tr data-module="hardening"><th scope="row">Account Hardening</th><td><div class="progress-track" role="progressbar" aria-label="Account Hardening progress" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill"></div></div><span class="progress-label"></span></td><td><span class="status"></span></td><td><a class="button button-small module-action" href="lesson.html?m=hardening&amp;l=1">Start</a></td></tr>
+        </tbody></table></div>
+      </section>
+      <section class="section panel" aria-labelledby="scenarios-heading">
+        <h2 id="scenarios-heading">Practice scenarios</h2>
+        <p>Work through realistic choices, see what could happen, and compare your response with an expert approach.</p>
+        <div class="grid two-column scenario-directory">
+          <article class="card"><h3>Phishing email</h3><p>Verify an urgent payroll message and report it safely.</p><a class="button button-secondary" href="lesson.html?m=phishing&amp;l=4&amp;scenario=phishing-email">Practice phishing email</a></article>
+          <article class="card"><h3>Online scam</h3><p>Respond to a suspicious marketplace payment and fee request.</p><a class="button button-secondary" href="lesson.html?m=phishing&amp;l=3&amp;scenario=online-scam">Practice online scam</a></article>
+          <article class="card"><h3>Cyberbullying</h3><p>Support someone targeted by harmful content without amplifying it.</p><a class="button button-secondary" href="lesson.html?m=privacy&amp;l=3&amp;scenario=cyberbullying">Practice cyberbullying response</a></article>
+          <article class="card"><h3>Identity theft</h3><p>Handle an unfamiliar account notice and a suspicious recovery call.</p><a class="button button-secondary" href="lesson.html?m=hardening&amp;l=4&amp;scenario=identity-theft">Practice identity theft response</a></article>
+          <article class="card"><h3>Real or fake website?</h3><p>Learn how to check a website address before you sign in or pay.</p><a class="button button-secondary" href="lesson.html?m=phishing&amp;l=5">Open the website safety lesson</a></article>
+          <article class="card"><h3>Is this message a scam?</h3><p>Use a private yes-or-no guide to check an unexpected message.</p><a class="button button-secondary" href="scam-checker.html">Open the message checker</a></article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>© 2026 CyberGuard x TechFlow · Security awareness for everyone.</span><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Dashboard</a><a href="password-tools.html">Tools</a><a href="ethics.html">Links</a></nav></footer>
+  </div></div>
+</body>
+</html>
